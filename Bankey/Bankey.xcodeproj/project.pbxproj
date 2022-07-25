@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A817BC56288ECB7C00415C17 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BC55288ECB7C00415C17 /* DummyViewController.swift */; };
 		A817BC59288ED58700415C17 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BC58288ED58700415C17 /* LocalState.swift */; };
+		A817BC5B288F00FD00415C17 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BC5A288F00FD00415C17 /* UIViewController+Utils.swift */; };
+		A817BC5D288F02A100415C17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BC5C288F02A100415C17 /* MainViewController.swift */; };
 		A81FA692288892630064CB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA691288892630064CB1B /* AppDelegate.swift */; };
 		A81FA696288892630064CB1B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA695288892630064CB1B /* LoginViewController.swift */; };
 		A81FA69B288892640064CB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A81FA69A288892640064CB1B /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		A817BC55288ECB7C00415C17 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		A817BC58288ED58700415C17 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
+		A817BC5A288F00FD00415C17 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		A817BC5C288F02A100415C17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A81FA68E288892630064CB1B /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A81FA691288892630064CB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A81FA695288892630064CB1B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				A817BC58288ED58700415C17 /* LocalState.swift */,
+				A817BC5A288F00FD00415C17 /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -70,11 +75,12 @@
 		A81FA690288892630064CB1B /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
-				A817BC57288ED56E00415C17 /* Utils */,
-				A8672675288BEAC500F2B277 /* Onboarding */,
-				A81FA6A5288897E70064CB1B /* Files */,
-				A81FA6A62888995A0064CB1B /* Login */,
 				A81FA691288892630064CB1B /* AppDelegate.swift */,
+				A81FA6A62888995A0064CB1B /* Login */,
+				A8672675288BEAC500F2B277 /* Onboarding */,
+				A817BC57288ED56E00415C17 /* Utils */,
+				A81FA6A5288897E70064CB1B /* Files */,
+				A817BC5C288F02A100415C17 /* MainViewController.swift */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -178,11 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A817BC5B288F00FD00415C17 /* UIViewController+Utils.swift in Sources */,
 				A81FA6A8288899BD0064CB1B /* LoginView.swift in Sources */,
 				A817BC59288ED58700415C17 /* LocalState.swift in Sources */,
 				A817BC56288ECB7C00415C17 /* DummyViewController.swift in Sources */,
 				A81FA696288892630064CB1B /* LoginViewController.swift in Sources */,
 				A86726A8288C5D0C00F2B277 /* OnboardingViewController.swift in Sources */,
+				A817BC5D288F02A100415C17 /* MainViewController.swift in Sources */,
 				A81FA692288892630064CB1B /* AppDelegate.swift in Sources */,
 				A8672677288BEB1800F2B277 /* OnboardingContainerViewController.swift in Sources */,
 			);

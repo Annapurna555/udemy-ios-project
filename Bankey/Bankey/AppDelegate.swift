@@ -7,6 +7,7 @@
 
 import UIKit
 
+let appColor: UIColor = .systemTeal
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let loginViewController = LoginViewController()
     let onboardingContainerViewController = OnboardingContainerViewController()
     let dummyViewController = DummyViewController()
+    let mainViewController = MainViewController()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -22,11 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
-        window?.rootViewController = loginViewController
+        window?.rootViewController = mainViewController
+        //window?.rootViewController = loginViewController
+        
         //window?.rootViewController = onboardingContainerViewController
         //window?.rootViewController = OnboardingViewController(image: "delorean", text: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in the 80s.")
 
-
+        mainViewController.selectedIndex = 2
         
         return true
     }
