@@ -135,16 +135,16 @@ extension LoginViewController {
         }
         
         if username.isEmpty || password.isEmpty {
-            configureView(withMessage: "Username / password cannot be blank")
-            return
+            signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         }
         
-        if username == "Kevin" && password == "Welcome" {
+        /*if username == "Kevin" && password == "Welcome" {
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorrect username / password")
-        }
+        }*/
     }
     
     private func configureView(withMessage message: String) {
