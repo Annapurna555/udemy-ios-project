@@ -18,6 +18,8 @@
 		A81FA69E288892640064CB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A81FA69C288892640064CB1B /* LaunchScreen.storyboard */; };
 		A81FA6A8288899BD0064CB1B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81FA6A7288899BD0064CB1B /* LoginView.swift */; };
 		A82D82922891767A00479A3A /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D82912891767A00479A3A /* ShakeyBellView.swift */; };
+		A82D82942891A91000479A3A /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D82932891A91000479A3A /* Date+Utils.swift */; };
+		A82D82962891AAD500479A3A /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D82952891AAD500479A3A /* AccountSummaryViewController+Networking.swift */; };
 		A8398D87288FF7B300DC464D /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8398D86288FF7B300DC464D /* AccountSummaryCell.swift */; };
 		A8398D89289016FF00DC464D /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8398D88289016FF00DC464D /* Decimal+Utils.swift */; };
 		A8398D8B2890176000DC464D /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8398D8A2890176000DC464D /* CurrencyFormatter.swift */; };
@@ -54,6 +56,8 @@
 		A81FA69F288892640064CB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A81FA6A7288899BD0064CB1B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A82D82912891767A00479A3A /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
+		A82D82932891A91000479A3A /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		A82D82952891AAD500479A3A /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		A8398D86288FF7B300DC464D /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		A8398D88289016FF00DC464D /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		A8398D8A2890176000DC464D /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				A817BC58288ED58700415C17 /* LocalState.swift */,
 				A8398D8A2890176000DC464D /* CurrencyFormatter.swift */,
 				A8398D9B2890583200DC464D /* NSNotificationName.swift */,
+				A82D82932891A91000479A3A /* Date+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A817BC5F288F398900415C17 /* AccountSummaryViewController.swift */,
+				A82D82952891AAD500479A3A /* AccountSummaryViewController+Networking.swift */,
 				A8398D84288FF74F00DC464D /* Header */,
 				A8398D85288FF78300DC464D /* Cells */,
 			);
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A817BC5B288F00FD00415C17 /* UIViewController+Utils.swift in Sources */,
+				A82D82942891A91000479A3A /* Date+Utils.swift in Sources */,
 				A81FA6A8288899BD0064CB1B /* LoginView.swift in Sources */,
 				A817BC59288ED58700415C17 /* LocalState.swift in Sources */,
 				A875646D288FD493004DED39 /* AccountSummaryHeaderView.swift in Sources */,
@@ -322,6 +329,7 @@
 				A817BC60288F398900415C17 /* AccountSummaryViewController.swift in Sources */,
 				A81FA692288892630064CB1B /* AppDelegate.swift in Sources */,
 				A8672677288BEB1800F2B277 /* OnboardingContainerViewController.swift in Sources */,
+				A82D82962891AAD500479A3A /* AccountSummaryViewController+Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
