@@ -15,12 +15,12 @@ class AccountSummaryViewController: UIViewController {
     
     //View Models
     var headerViewModel = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Welcome", name: "", date: Date())
-
+    
     var accountCellViewModels: [AccountSummaryCell.ViewModel] = []
     
     var tableView = UITableView()
     var headerView = AccountSummaryHeaderView(frame: .zero)
-
+    
     
     lazy var logoutBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
@@ -31,20 +31,17 @@ class AccountSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        setupNavigationBar()
     }
     
-    func setupNavigationBar() {
-            navigationItem.rightBarButtonItem = logoutBarButtonItem
-        }
+    
 }
 
 extension AccountSummaryViewController {
     private func setup() {
+        setupNavigationBar()
         setupTableView()
         setupTableHeaderView()
-//        fetchAccounts()
-        fetchDataAndLoadViews()
+        fetchData()
     }
     
     private func setupTableView() {
@@ -76,18 +73,22 @@ extension AccountSummaryViewController {
         
         tableView.tableHeaderView = headerView
     }
+    
+    func setupNavigationBar() {
+        navigationItem.rightBarButtonItem = logoutBarButtonItem
+    }
 }
 
 extension AccountSummaryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard !accountCellViewModels.isEmpty else { return UITableViewCell() }
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
-            let account = accountCellViewModels[indexPath.row]
-            cell.configure(with: account)
-            
-            return cell
-        }
+        guard !accountCellViewModels.isEmpty else { return UITableViewCell() }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
+        let account = accountCellViewModels[indexPath.row]
+        cell.configure(with: account)
+        
+        return cell
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accountCellViewModels.count
@@ -110,8 +111,10 @@ extension AccountSummaryViewController {
 
 // MARK: - Networking
 extension AccountSummaryViewController {
-    private func fetchDataAndLoadViews() {
+    private func fetchData() {
+        let group = DispatchGroup()
         
+        group.enter()
         fetchProfile(forUserId: "1") { result in
             switch result {
             case .success(let profile):
@@ -121,8 +124,9 @@ extension AccountSummaryViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
         }
-
+        group.enter()
         fetchAccounts(forUserId: "1") { result in
             switch result {
             case .success(let accounts):
@@ -132,6 +136,11 @@ extension AccountSummaryViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            self.tableView.reloadData()
         }
     }
     
