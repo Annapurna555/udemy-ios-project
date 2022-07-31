@@ -55,9 +55,6 @@
 				A8E013EE28969630000A27C8 /* Files */,
 				A8E013DA2896961E000A27C8 /* AppDelegate.swift */,
 				A8E013DE2896961E000A27C8 /* ViewController.swift */,
-				A8E013E32896961F000A27C8 /* Assets.xcassets */,
-				A8E013E52896961F000A27C8 /* LaunchScreen.storyboard */,
-				A8E013E82896961F000A27C8 /* Info.plist */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -65,6 +62,9 @@
 		A8E013EE28969630000A27C8 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				A8E013E32896961F000A27C8 /* Assets.xcassets */,
+				A8E013E52896961F000A27C8 /* LaunchScreen.storyboard */,
+				A8E013E82896961F000A27C8 /* Info.plist */,
 			);
 			name = Files;
 			sourceTree = "<group>";
