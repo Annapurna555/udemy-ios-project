@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A844C69E28969C4F00773F88 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844C69D28969C4F00773F88 /* PasswordTextField.swift */; };
+		A88811E628999F240065F7A8 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88811E528999F240065F7A8 /* UIResponder+Utils.swift */; };
 		A8A39D2928980BD000C6462C /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A39D2828980BD000C6462C /* PasswordCriteriaView.swift */; };
 		A8A39D2B2898243900C6462C /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A39D2A2898243900C6462C /* PasswordStatusView.swift */; };
 		A8D8234428993BAA00415D64 /* PasswordCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D8234328993BAA00415D64 /* PasswordCriteria.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		A844C69D28969C4F00773F88 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		A88811E528999F240065F7A8 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		A8A39D2828980BD000C6462C /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		A8A39D2A2898243900C6462C /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		A8D8234328993BAA00415D64 /* PasswordCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteria.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A88811E428999F0A0065F7A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A88811E528999F240065F7A8 /* UIResponder+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A8A39D2728980BAC00C6462C /* PasswordStatusView */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A8E013D92896961E000A27C8 /* Password */,
+				A88811E428999F0A0065F7A8 /* Utils */,
 				A8E013D82896961E000A27C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8E013DF2896961E000A27C8 /* ViewController.swift in Sources */,
+				A88811E628999F240065F7A8 /* UIResponder+Utils.swift in Sources */,
 				A8D8234428993BAA00415D64 /* PasswordCriteria.swift in Sources */,
 				A8E013DB2896961E000A27C8 /* AppDelegate.swift in Sources */,
 				A8A39D2928980BD000C6462C /* PasswordCriteriaView.swift in Sources */,
